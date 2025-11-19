@@ -44,7 +44,7 @@ def main():
         for recipe in cookbook:
             attrs = attrs.union(tuple(recipe.keys()))
 
-        attr_str = ", ".join(attrs)
+        attr_str = ", ".join(attrs)  # noqa: F841
         # TODO: print this nicer
         pp.pprint(f"Attributes:  {attrs}")
         sys.exit(0)
@@ -59,7 +59,7 @@ def main():
             sys.exit(1)
         elif idx < 0:
             print(
-                f"Negative numbered recipes are not valid input. The number of recipes starts at 0."
+                f"Negative numbered recipes are not valid input. The number of recipes starts at 0."  # noqa: F541
             )
             sys.exit(1)
 
